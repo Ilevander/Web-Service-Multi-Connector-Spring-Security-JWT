@@ -1,8 +1,11 @@
-package com.ilyass.wsmulticonnectorspringsecurityjwt.service.model;
+package com.ilyass.wsmulticonnectorspringsecurityjwt.service;
 
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.PermissionVo;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.RoleVo;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.UserVo;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.Permission;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.Role;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.User;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -18,7 +21,7 @@ import java.util.stream.Collectors;
 @Service
 @Transactional
 @AllArgsConstructor
-public class UserServiceImpl implements IUserService , UserDetailsService {
+public class UserServiceImpl implements IUserService, UserDetailsService {
     private UserRepository userRepository;
     private RoleRepository roleRepository;
     private PasswordEncoder passwordEncoder;

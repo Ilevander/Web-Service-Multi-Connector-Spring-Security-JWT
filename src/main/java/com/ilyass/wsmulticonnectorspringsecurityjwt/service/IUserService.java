@@ -1,4 +1,4 @@
-package com.ilyass.wsmulticonnectorspringsecurityjwt.service.model;
+package com.ilyass.wsmulticonnectorspringsecurityjwt.service;
 
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.PermissionVo;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.RoleVo;
