@@ -1,6 +1,6 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt.service.model;
 
-import com.ilyass.wsmulticonnectorspringsecurityjwt.enums.TransactionType;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.enums.AccountStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,26 +8,26 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Data
-public class BankAccountTransaction {
+public class BankAccount {
     @Id
     @GeneratedValue
     private Long id;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdAt;
-
-    @Enumerated(EnumType.STRING)
-    private TransactionType transactionType;
+    private String rib;
     private Double amount;
-    @ManyToOne
-    private BankAccount bankAccount;
+    private Date createdAt;
+    @Enumerated(EnumType.STRING)
+    private AccountStatus accountStatus;
 
     @ManyToOne
-    private User user;
+    private Customer customer;
+    @OneToMany(mappedBy = "bankAccount")
+    private List<BankAccountTransaction> bankAccountTransactionList;
+
 }

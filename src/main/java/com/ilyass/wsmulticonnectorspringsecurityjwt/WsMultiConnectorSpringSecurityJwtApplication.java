@@ -1,5 +1,6 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt;
 
+import com.ilyass.wsmulticonnectorspringsecurityjwt.service.IUserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
