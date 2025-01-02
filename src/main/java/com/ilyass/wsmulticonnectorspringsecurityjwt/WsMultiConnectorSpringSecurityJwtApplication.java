@@ -1,5 +1,6 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt;
 
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.UserVo;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.IBankAccountService;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.ICustomerService;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.ITransactionService;
@@ -12,6 +13,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import net.devh.boot.grpc.server.security.authentication.BasicGrpcAuthenticationReader;
 import net.devh.boot.grpc.server.security.authentication.GrpcAuthenticationReader;
+
+import java.util.List;
 
 @SpringBootApplication
 public class WsMultiConnectorSpringSecurityJwtApplication {
