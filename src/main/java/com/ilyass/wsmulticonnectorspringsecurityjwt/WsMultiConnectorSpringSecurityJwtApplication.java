@@ -1,5 +1,8 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt;
 
+import com.ilyass.wsmulticonnectorspringsecurityjwt.service.IBankAccountService;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.service.ICustomerService;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.service.ITransactionService;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.IUserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
