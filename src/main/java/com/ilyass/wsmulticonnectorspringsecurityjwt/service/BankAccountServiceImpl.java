@@ -1,5 +1,10 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt.service;
 
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dao.BankAccountRepository;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dao.CustomerRepository;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.bankaccount.AddBankAccountRequest;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.bankaccount.AddBankAccountResponse;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.bankaccount.BankAccountDto;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.enums.AccountStatus;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.exception.BusinessException;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.BankAccount;
@@ -10,15 +15,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 import java.util.stream.Collectors;
+
 
 @Service
 @Transactional
 @AllArgsConstructor
-public class BankAccountServiceImpl {
+public class BankAccountServiceImpl implements IBankAccountService {
     private final BankAccountRepository bankAccountRepository;
     private final CustomerRepository customerRepository;
-    private ModelMapper modelMapper;
+    private final ModelMapper modelMapper;
 
 
     @Override

@@ -1,5 +1,8 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt.service;
 
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dao.PermissionRepository;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dao.RoleRepository;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dao.UserRepository;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.PermissionVo;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.RoleVo;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.UserVo;
@@ -7,6 +10,7 @@ import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.Permission;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.Role;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.User;
 import lombok.AllArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

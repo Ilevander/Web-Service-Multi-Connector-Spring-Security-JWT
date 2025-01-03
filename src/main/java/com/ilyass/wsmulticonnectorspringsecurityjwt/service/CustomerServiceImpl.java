@@ -1,11 +1,16 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt.service;
 
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dao.CustomerRepository;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.customer.*;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.exception.BusinessException;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.Customer;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.modelmapper.ModelMapper;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional

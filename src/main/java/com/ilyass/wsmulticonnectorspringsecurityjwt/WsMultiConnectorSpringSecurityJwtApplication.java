@@ -1,6 +1,13 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt;
 
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.bankaccount.AddBankAccountRequest;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.customer.AddCustomerRequest;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.transaction.AddWirerTransferRequest;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.PermissionVo;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.RoleVo;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.UserVo;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.enums.Permisssions;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.enums.Roles;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.IBankAccountService;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.ICustomerService;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.ITransactionService;
@@ -14,9 +21,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import net.devh.boot.grpc.server.security.authentication.BasicGrpcAuthenticationReader;
 import net.devh.boot.grpc.server.security.authentication.GrpcAuthenticationReader;
 
+import java.util.Arrays;
 import java.util.List;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.ilyass.wsmulticonnectorspringsecurityjwt"})
 public class WsMultiConnectorSpringSecurityJwtApplication {
 
     public static void main(String[] args) {

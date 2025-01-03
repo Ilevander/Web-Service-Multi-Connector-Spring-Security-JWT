@@ -1,15 +1,27 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt.service;
 
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dao.BankAccountRepository;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dao.BankAccountTransactionRepository;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dao.UserRepository;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.transaction.AddWirerTransferRequest;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.transaction.AddWirerTransferResponse;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.transaction.GetTransactionListRequest;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.transaction.TransactionDto;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.enums.AccountStatus;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.enums.TransactionType;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.exception.BusinessException;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.BankAccount;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.BankAccountTransaction;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.GetTransactionListBo;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.model.User;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
