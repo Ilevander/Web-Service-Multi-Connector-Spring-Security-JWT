@@ -16,7 +16,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
     protected String username;
     protected String firstname;
@@ -36,6 +36,9 @@ public class User {
 
     public User(String username) {
         this.username = username;
-
     }
+
+    public User() {
+    }
+
 }

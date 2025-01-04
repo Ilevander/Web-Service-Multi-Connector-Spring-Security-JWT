@@ -15,7 +15,13 @@ import java.util.List;
 @Builder
 public class RoleVo implements GrantedAuthority {
     private int id;
+    private String roleName;
     //this field contains the role user, for example : ROLE_ADMIN
     private String authority;
     private List<PermissionVo> authorities = new ArrayList<>();
+
+    @Override
+    public String getAuthority() {
+        return roleName;
+    }
 }
