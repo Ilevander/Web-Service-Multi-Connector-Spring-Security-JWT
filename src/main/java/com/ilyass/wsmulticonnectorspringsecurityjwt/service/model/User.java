@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Table(name = "app_user")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
     @Id
@@ -36,9 +37,6 @@ public class User {
 
     public User(String username) {
         this.username = username;
-    }
-
-    public User() {
     }
 
 }

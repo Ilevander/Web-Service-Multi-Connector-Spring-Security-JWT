@@ -1,4 +1,4 @@
-package com.ilyass.wsmulticonnectorspringsecurityjwt;
+package com.ilyass.wsmulticonnectorspringsecurityjwt.jwt;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

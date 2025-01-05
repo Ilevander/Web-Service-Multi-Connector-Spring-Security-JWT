@@ -1,6 +1,6 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt.presentation.auth;
 
-import com.ilyass.wsmulticonnectorspringsecurityjwt.JwtUtils;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.jwt.JwtUtils;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.dtos.user.*;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.exception.BusinessException;
 import com.ilyass.wsmulticonnectorspringsecurityjwt.service.IUserService;

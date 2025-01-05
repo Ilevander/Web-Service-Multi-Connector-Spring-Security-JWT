@@ -24,4 +24,9 @@ public class CommonTools {
         SimpleDateFormat formatter = new SimpleDateFormat(dateFormat);
         return formatter.parse(date);
     }
+
+    public String getDateFormat() {
+        return dateFormat;
+    }
+
 }

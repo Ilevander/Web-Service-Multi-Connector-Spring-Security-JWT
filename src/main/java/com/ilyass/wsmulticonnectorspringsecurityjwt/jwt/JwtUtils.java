@@ -1,4 +1,4 @@
-package com.ilyass.wsmulticonnectorspringsecurityjwt;
+package com.ilyass.wsmulticonnectorspringsecurityjwt.jwt;
 
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;

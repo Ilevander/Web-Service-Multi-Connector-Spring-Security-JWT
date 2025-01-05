@@ -1,8 +1,10 @@
 package com.ilyass.wsmulticonnectorspringsecurityjwt.config;
 
-import com.ilyass.wsmulticonnectorspringsecurityjwt.AuthEntryPointJwt;
-import com.ilyass.wsmulticonnectorspringsecurityjwt.AuthTokenFilter;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.jwt.AuthEntryPointJwt;
+import com.ilyass.wsmulticonnectorspringsecurityjwt.jwt.AuthTokenFilter;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -35,6 +37,8 @@ import java.util.List;
 @EnableMethodSecurity
 public class SecurityConfiguration {
     private UserDetailsService userDetailsService;
+    @Autowired
+    @Qualifier("defaultPasswordEncoder")
     private PasswordEncoder passwordEncoder;
     private AuthTokenFilter authTokenFilter;
     private AuthEntryPointJwt unauthorizedHandler;
@@ -102,7 +106,7 @@ public class SecurityConfiguration {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    public PasswordEncoder defaultPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 }
